@@ -41,3 +41,16 @@ docker build -t products:v1.0 ./products
 ![](images/orders_build.png)
 ![](images/emails_build.png)
 ![](images/products_build.png)
+
+بعد از آن با کمک دستورات زیر هر کدام را اجرا می‌کنیم:
+
+```
+docker run -p 8002:8002 --name emails emails:v1.0
+docker run -p 8001:8001 --name products products:v1.0
+docker run -p 8003:8003 --name orders orders:v1.0
+```
+
+نتیجه‌ی اجرا کردن دستورات مشابه زیر است:
+
+
+![](images/emails_run.png)
