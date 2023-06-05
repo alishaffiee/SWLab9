@@ -36,6 +36,8 @@ docker build -t products:v1.0 ./products
 ```
 
 
-نمونه‌ی اجرا برای ساختن `orders` را در اینجا مشاهده می‌کنید:
+نتیجه‌ی بیلد کردن‌ها را در عکس‌های زیر مشاهده می‌کنید:
 
 ![](images/orders_build.png)
+![](images/emails_build.png)
+![](images/products_build.png)
