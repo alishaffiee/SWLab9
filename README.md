@@ -14,13 +14,25 @@ RUN mkdir /code
 
 WORKDIR /code
 
-COPY . .
+COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8001
+EXPOSE 8003
 
 COPY . .
 
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["python3", "manage.py", "runserver", "8003"]
 ```
+
+بعد از کامل کردن پروژه برای استفاده از داکر از [ابزار معرفی‌شده](https://labs.play-with-docker.com/) استفاده می‌کنیم و بعد از ساختن یک session, instance در این ابزار، پروژه‌ی گیت را در آن کلون می‌کنیم تا بتوانیم آن را داکرایز کنیم.
+
+بعد از آن با کمک دستورات زیر، dockerfile ها را build می‌کنیم:
+
+```
+docker build -t orders:v1.0 ./orders
+docker build -t emails:v1.0 ./emails
+docker build -t products:v1.0 ./products
+```
+
+
