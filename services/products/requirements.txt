@@ -4,3 +4,4 @@ djongo
 # psycopg2
 gunicorn
 requests
+rest_framework_swagger
